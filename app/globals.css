@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #ff6200;
+  --amber: #ffb020;
+  --rust: #c74600;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Brand color utilities ---------- */
+.text-orange {
+  color: var(--orange);
+}
+.bg-orange {
+  background-color: var(--orange);
+}
+.border-orange {
+  border-color: var(--orange);
+}
+.text-gradient {
+  background-image: linear-gradient(90deg, var(--orange), var(--amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.kicker-line {
+  height: 1px;
+  width: 2rem;
+  background-image: linear-gradient(90deg, var(--orange), var(--amber));
+  flex-shrink: 0;
+}
+
+/* ---------- Texture & background ---------- */
+.grit-texture {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background-image: radial-gradient(ellipse 90% 60% at 15% 20%, rgba(255, 98, 0, 0.16), transparent 60%),
+    linear-gradient(rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.94));
+}
+
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+.blob-orange {
+  background: radial-gradient(circle, rgba(255, 98, 0, 0.45), transparent 70%);
+  width: 32rem;
+  height: 32rem;
+  top: -8rem;
+  left: -6rem;
+}
+.blob-amber {
+  background: radial-gradient(circle, rgba(255, 176, 32, 0.3), transparent 70%);
+  width: 26rem;
+  height: 26rem;
+  bottom: -6rem;
+  right: -4rem;
+}
+
+/* ---------- Nav ---------- */
+.nav-scrolled {
+  background-color: rgba(6, 6, 6, 0.97);
+  box-shadow: 0 10px 25px -10px rgb(0 0 0 / 0.6);
+  border-bottom: 1px solid rgba(255, 98, 0, 0.15);
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -6px;
+  height: 2px;
+  background-image: linear-gradient(90deg, var(--orange), var(--amber));
+  transition: left 0.3s ease, right 0.3s ease;
+}
+.nav-link:hover::after {
+  left: 0;
+  right: 0;
+}
+.logo-glow {
+  filter: drop-shadow(0 0 14px rgba(255, 98, 0, 0.35)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7));
+}
+
+/* ---------- Cards ---------- */
+.accent-bar {
+  position: relative;
+}
+.accent-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-image: linear-gradient(90deg, var(--orange), var(--amber));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s ease;
+  z-index: 1;
+}
+.accent-bar:hover::before {
+  transform: scaleX(1);
+}
+.counter-card {
+  background: linear-gradient(155deg, #151515 0%, #0c0c0c 100%);
+}
+.ba-tag {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- Buttons ---------- */
+.btn-orange {
+  background-image: linear-gradient(135deg, var(--orange), var(--rust));
+  box-shadow: 0 8px 24px -8px rgba(255, 98, 0, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-image 0.3s ease;
+}
+.btn-orange:hover {
+  background-image: linear-gradient(135deg, #ff7a29, var(--orange));
+  box-shadow: 0 12px 32px -8px rgba(255, 98, 0, 0.65);
+}
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-shine:hover::after {
+  left: 120%;
+}
+
+/* ---------- Form ---------- */
+input,
+textarea,
+select {
+  background-color: #111111;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 98, 0, 0.15);
+}
+
+::selection {
+  background: rgba(255, 98, 0, 0.35);
+}
+
+/* ---------- Mobile ---------- */
+.mobile-cta-bar {
+  padding-bottom: calc(0.65rem + env(safe-area-inset-bottom));
+}
