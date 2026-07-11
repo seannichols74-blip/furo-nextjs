@@ -80,8 +80,8 @@ export const galleryItems: GalleryItem[] = [
     title: "Site Excavation",
     description:
       "Precision grading and base installation for a new residential parking pad.",
-    before: "/images/project2-before.png",
-    after: "/images/project2-after.png",
+    before: "/images/project2-after.png",
+    after: "/images/project2-before.png",
   },
   {
     type: "single",
