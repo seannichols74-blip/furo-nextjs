@@ -2,7 +2,7 @@ export type ServiceIcon =
   | "excavation"
   | "clearing"
   | "driveway"
-  | "demolition"
+  | "landscaping"
   | "septic"
   | "undercoating";
 
@@ -32,10 +32,10 @@ export const services: Service[] = [
       "Gravel and stone driveways engineered with proper drainage to hold up through Maine winters.",
   },
   {
-    icon: "demolition",
-    title: "Demolition",
+    icon: "landscaping",
+    title: "Landscaping",
     description:
-      "Safe, efficient teardown of structures with clean debris removal and site restoration.",
+      "Grading, mulch beds, and finish landscaping to shape, level, and beautify your property.",
   },
   {
     icon: "septic",
@@ -110,6 +110,22 @@ export const galleryItems: GalleryItem[] = [
     image: "/images/project4.png",
   },
   {
+    type: "before-after",
+    title: "Lakefront Land Clearing",
+    description:
+      "Overgrown shoreline cleared and graded into usable, open waterfront space.",
+    before: "/images/project5-before.png",
+    after: "/images/project5-after.png",
+  },
+  {
+    type: "before-after",
+    title: "Shoreline Erosion Control",
+    description:
+      "Stone rip-rap installed to stabilize the bank and stop erosion for good.",
+    before: "/images/project6-before.png",
+    after: "/images/project6-after.png",
+  },
+  {
     type: "composite",
     title: "Private Road Rebuild",
     description:
@@ -117,14 +133,6 @@ export const galleryItems: GalleryItem[] = [
     image: "/images/project19.jpg",
     width: 1177,
     height: 870,
-  },
-  {
-    type: "before-after",
-    title: "Lakefront Land Clearing",
-    description:
-      "Overgrown shoreline cleared and graded into usable, open waterfront space.",
-    before: "/images/project5-before.png",
-    after: "/images/project5-after.png",
   },
   {
     type: "composite",
@@ -137,29 +145,12 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     type: "composite",
-    title: "Property Entrance Landscaping",
-    description:
-      "Cleared and rebuilt into a clean mulched bed framing an engraved entrance stone.",
-    image: "/images/project22.jpg",
-    width: 1206,
-    height: 1608,
-  },
-  {
-    type: "composite",
     title: "Woods Road Reclamation",
     description:
       "A rutted, washed-out woods road regraded with proper drainage and stabilized banks.",
     image: "/images/project23.jpg",
     width: 1206,
     height: 1608,
-  },
-  {
-    type: "before-after",
-    title: "Shoreline Erosion Control",
-    description:
-      "Stone rip-rap installed to stabilize the bank and stop erosion for good.",
-    before: "/images/project6-before.png",
-    after: "/images/project6-after.png",
   },
 ];
 

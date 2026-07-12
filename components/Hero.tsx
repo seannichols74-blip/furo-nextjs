@@ -85,7 +85,7 @@ export default function Hero() {
             variants={item}
             className="text-xs sm:text-sm uppercase tracking-widest text-neutral-400 mb-10 font-medium"
           >
-            Excavation &middot; Demolition &middot; Land Clearing &middot; Driveways &middot;
+            Excavation &middot; Landscaping &middot; Land Clearing &middot; Driveways &middot;
             Drainage &middot; Septic &middot; Undercoating
           </motion.p>
 

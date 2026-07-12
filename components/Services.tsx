@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Truck, TreePine, Route, Hammer, Droplets, Car } from "lucide-react";
+import { Truck, TreePine, Route, Sprout, Droplets, Car } from "lucide-react";
 import { services, type ServiceIcon } from "@/lib/data";
 
 const iconMap: Record<ServiceIcon, typeof Truck> = {
   excavation: Truck,
   clearing: TreePine,
   driveway: Route,
-  demolition: Hammer,
+  landscaping: Sprout,
   septic: Droplets,
   undercoating: Car,
 };

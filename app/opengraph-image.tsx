@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Furo Enterprises LLC — Northern Maine Excavation & Demolition";
+export const alt = "Furo Enterprises LLC — Northern Maine Excavation & Landscaping";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -79,7 +79,7 @@ export default async function Image() {
             marginTop: 22,
           }}
         >
-          Excavation &middot; Demolition &middot; Land Clearing &middot; Linneus, ME
+          Excavation &middot; Landscaping &middot; Land Clearing &middot; Linneus, ME
         </div>
       </div>
     ),

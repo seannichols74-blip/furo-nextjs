@@ -33,7 +33,7 @@ export default function About() {
             Backed by a <span className="text-gradient">Growing Fleet.</span>
           </h2>
           <p className="text-neutral-400 text-lg leading-relaxed mb-6">
-            Furo Enterprises LLC is a Linneus-based excavation and demolition company serving
+            Furo Enterprises LLC is a Linneus-based excavation and landscaping company serving
             Northern Maine with heavy equipment work that&apos;s honest, on-schedule, and built to
             last. We&apos;re fully insured and Maine DEP licensed, so every septic, drainage, and
             site prep job is handled to code &mdash; no shortcuts.

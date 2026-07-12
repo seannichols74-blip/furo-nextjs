@@ -22,9 +22,9 @@ const spaceGrotesk = Space_Grotesk({
 
 const siteUrl = "https://www.furoenterprisesllc.com";
 
-const title = "Furo Enterprises LLC | Northern Maine Excavation & Demolition";
+const title = "Furo Enterprises LLC | Northern Maine Excavation & Landscaping";
 const description =
-  "Furo Enterprises LLC — Fully insured, Maine DEP licensed excavation, demolition, land clearing, driveways, drainage, septic systems & vehicle undercoating in Linneus, Maine.";
+  "Furo Enterprises LLC — Fully insured, Maine DEP licensed excavation, landscaping, land clearing, driveways, drainage, septic systems & vehicle undercoating in Linneus, Maine.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "excavation Maine",
-    "demolition Linneus ME",
+    "landscaping Linneus ME",
     "land clearing Northern Maine",
     "septic installation Maine",
     "driveway grading Maine",
@@ -125,7 +125,7 @@ const jsonLd = {
     name: "Services",
     itemListElement: [
       "Excavation",
-      "Demolition",
+      "Landscaping",
       "Land Clearing",
       "Driveways",
       "Drainage",

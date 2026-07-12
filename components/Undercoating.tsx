@@ -45,7 +45,7 @@ const gallery: GalleryEntry[] = [
     caption: "What your undercoating looks like after one year",
   },
   { kind: "single", src: "/images/project9.jpg", caption: "Full Vehicle Undercoating" },
-  { kind: "single", src: "/images/project10.jpg", caption: "Frame & Undercarriage Sealing" },
+  { kind: "single", src: "/images/project10.jpg", caption: "Frame & Undercarriage Washing" },
   {
     kind: "wide",
     src: "/images/project20.jpg",
