@@ -52,7 +52,9 @@ export default function Gallery() {
               key={project.title}
               variants={item}
               whileHover={{ y: -8 }}
-              className="accent-bar group bg-neutral-950 rounded-3xl border border-neutral-800 overflow-hidden transition-colors hover:border-[#FF6200]/50"
+              className={`accent-bar group bg-neutral-950 rounded-3xl border border-neutral-800 overflow-hidden transition-colors hover:border-[#FF6200]/50 ${
+                project.type === "composite" ? "self-start" : ""
+              }`}
             >
               {project.type === "before-after" ? (
                 <div className="grid grid-cols-2 gap-px bg-neutral-800 overflow-hidden">
@@ -80,6 +82,17 @@ export default function Gallery() {
                       After
                     </span>
                   </div>
+                </div>
+              ) : project.type === "composite" ? (
+                <div className="overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={project.width}
+                    height={project.height}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
               ) : (
                 <div className="relative h-56 sm:h-[248px] overflow-hidden">

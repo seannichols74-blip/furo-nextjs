@@ -5,9 +5,10 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ShieldCheck, MapPin, Phone, Menu, X } from "lucide-react";
 
-const links = [
+const links: { href: string; label: string; highlight?: boolean }[] = [
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
+  { href: "#undercoating", label: "Undercoating", highlight: true },
   { href: "#gallery", label: "Projects" },
   { href: "#testimonials", label: "Reviews" },
   { href: "#contact", label: "Contact" },
@@ -63,12 +64,23 @@ export default function Navbar() {
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-200">
-            {links.map((link) => (
-              <a key={link.href} href={link.href} className="nav-link hover:text-orange transition-colors">
-                {link.label}
-              </a>
-            ))}
+          <div className="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-200">
+            {links.map((link) =>
+              link.highlight ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[#FF6200]/50 bg-[#FF6200]/10 px-4 py-1.5 font-semibold text-orange shadow-[0_0_20px_-6px_#FF6200] transition-all duration-300 hover:bg-[#FF6200] hover:text-black hover:shadow-[0_0_22px_-4px_#FF6200]"
+                >
+                  <ShieldCheck className="w-4 h-4" />
+                  {link.label}
+                </a>
+              ) : (
+                <a key={link.href} href={link.href} className="nav-link hover:text-orange transition-colors">
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
 
           <div className="flex items-center gap-3">
@@ -98,16 +110,28 @@ export default function Navbar() {
               className="md:hidden overflow-hidden bg-neutral-950 border-t border-neutral-900"
             >
               <div className="flex flex-col px-6 py-4 gap-1 text-neutral-200 font-medium divide-y divide-neutral-900">
-                {links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {links.map((link) =>
+                  link.highlight ? (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="flex items-center gap-2 py-2 font-semibold text-orange"
+                    >
+                      <ShieldCheck className="w-4 h-4" />
+                      {link.label}
+                    </a>
+                  ) : (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
                 <a
                   href="tel:2072490162"
                   onClick={() => setMenuOpen(false)}

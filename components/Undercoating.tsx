@@ -33,6 +33,7 @@ const benefits = [
 
 type GalleryEntry =
   | { kind: "single"; src: string; caption: string }
+  | { kind: "wide"; src: string; caption: string }
   | { kind: "feature"; src: string; caption: string }
   | { kind: "split"; src: string; caption: string }
   | { kind: "pair"; before: string; after: string; caption: string };
@@ -46,10 +47,9 @@ const gallery: GalleryEntry[] = [
   { kind: "single", src: "/images/project9.jpg", caption: "Full Vehicle Undercoating" },
   { kind: "single", src: "/images/project10.jpg", caption: "Frame & Undercarriage Sealing" },
   {
-    kind: "pair",
-    before: "/images/project14.jpg",
-    after: "/images/project15.jpg",
-    caption: "Truck Undercarriage Before & After",
+    kind: "wide",
+    src: "/images/project20.jpg",
+    caption: "Commercial Truck Undercoating",
   },
   {
     kind: "split",
@@ -100,9 +100,16 @@ export default function Undercoating() {
           <h2 className="text-4xl md:text-5xl font-bold font-display mt-3 mb-5">
             Protect Your <span className="text-gradient">Equipment</span>
           </h2>
-          <p className="text-neutral-400 text-lg">
-            Professional rust-proofing that shields your trucks, trailers, and equipment from
-            the road salt and moisture that destroy untreated metal.
+          <p className="text-neutral-300 text-lg">
+            We use <span className="font-semibold text-white">NHOU V3</span>, an advanced
+            hybrid rust-proofing formula that combines deep-penetrating oil, durable wax, and
+            natural lanolin with rodent defense.
+          </p>
+          <p className="text-neutral-400 text-lg mt-4">
+            This professional treatment creates a long-lasting, drip-free barrier that shields
+            your trucks, trailers, and heavy equipment from road salt, moisture, and Maine
+            winters &mdash; preventing rust before it starts and saving you thousands in
+            repairs.
           </p>
         </motion.div>
 
@@ -232,6 +239,33 @@ export default function Undercoating() {
                     </div>
                   </div>
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-5">
+                    <h3 className="font-semibold text-white transition-colors group-hover:text-orange">
+                      {entry.caption}
+                    </h3>
+                  </div>
+                </motion.div>
+              );
+            }
+
+            if (entry.kind === "wide") {
+              // A single photo occupying the 2-column slot the before/after pair used,
+              // so the grid stays balanced.
+              return (
+                <motion.div
+                  key={entry.src}
+                  variants={item}
+                  whileHover={{ y: -8 }}
+                  className="accent-bar group relative h-full overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-950 transition-colors hover:border-[#FF6200]/50 sm:col-span-2"
+                >
+                  <Image
+                    src={entry.src}
+                    alt={entry.caption}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 66vw"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
+                  <div className="absolute inset-x-0 bottom-0 p-5">
                     <h3 className="font-semibold text-white transition-colors group-hover:text-orange">
                       {entry.caption}
                     </h3>

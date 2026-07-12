@@ -64,6 +64,16 @@ export type GalleryItem =
       title: string;
       description: string;
       image: string;
+    }
+  | {
+      // A single photo that is itself a before/after composite (labels baked in).
+      // Shown uncropped at its natural aspect ratio so the labels stay visible.
+      type: "composite";
+      title: string;
+      description: string;
+      image: string;
+      width: number;
+      height: number;
     };
 
 export const galleryItems: GalleryItem[] = [
@@ -77,18 +87,20 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     type: "before-after",
-    title: "Site Excavation",
+    title: "Driveway Repair",
     description:
       "Precision grading and base installation for a new residential parking pad.",
     before: "/images/project2-after.png",
     after: "/images/project2-before.png",
   },
   {
-    type: "single",
-    title: "Our Expanded Fleet",
+    type: "composite",
+    title: "Land Clearing & Site Grading",
     description:
-      "New equipment added this season, giving us more capacity and faster turnaround.",
-    image: "/images/project3.png",
+      "An overgrown hilltop lot cleared and graded into a level, building-ready site.",
+    image: "/images/project18.jpg",
+    width: 1172,
+    height: 774,
   },
   {
     type: "single",
@@ -98,12 +110,48 @@ export const galleryItems: GalleryItem[] = [
     image: "/images/project4.png",
   },
   {
+    type: "composite",
+    title: "Private Road Rebuild",
+    description:
+      "A washed-out dirt road rebuilt with fresh gravel and rock-lined drainage for year-round access.",
+    image: "/images/project19.jpg",
+    width: 1177,
+    height: 870,
+  },
+  {
     type: "before-after",
     title: "Lakefront Land Clearing",
     description:
       "Overgrown shoreline cleared and graded into usable, open waterfront space.",
     before: "/images/project5-before.png",
     after: "/images/project5-after.png",
+  },
+  {
+    type: "composite",
+    title: "Foundation Excavation & Backfill",
+    description:
+      "Excavated, formed, and backfilled with compacted gravel for a new home foundation.",
+    image: "/images/project21.jpg",
+    width: 1206,
+    height: 1608,
+  },
+  {
+    type: "composite",
+    title: "Property Entrance Landscaping",
+    description:
+      "Cleared and rebuilt into a clean mulched bed framing an engraved entrance stone.",
+    image: "/images/project22.jpg",
+    width: 1206,
+    height: 1608,
+  },
+  {
+    type: "composite",
+    title: "Woods Road Reclamation",
+    description:
+      "A rutted, washed-out woods road regraded with proper drainage and stabilized banks.",
+    image: "/images/project23.jpg",
+    width: 1206,
+    height: 1608,
   },
   {
     type: "before-after",
