@@ -139,18 +139,18 @@ export const galleryItems: GalleryItem[] = [
     title: "Foundation Excavation & Backfill",
     description:
       "Excavated, formed, and backfilled with compacted gravel for a new home foundation.",
-    image: "/images/project21.jpg",
-    width: 1206,
-    height: 1608,
+    image: "/images/project26.jpg",
+    width: 1178,
+    height: 788,
   },
   {
     type: "composite",
     title: "Woods Road Reclamation",
     description:
       "A rutted, washed-out woods road regraded with proper drainage and stabilized banks.",
-    image: "/images/project23.jpg",
-    width: 1206,
-    height: 1608,
+    image: "/images/project25.jpg",
+    width: 1165,
+    height: 880,
   },
 ];
 
