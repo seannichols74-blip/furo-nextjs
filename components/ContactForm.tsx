@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
+import { Calendar } from 'lucide-react';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdvnwed';
 
@@ -82,6 +83,16 @@ export default function ContactForm() {
           {error && (
             <p className="text-red-400 text-sm text-center">{error}</p>
           )}
+
+          <a
+            href="https://cal.com/furoenterprises"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2.5 border-2 border-[#FF6200] text-[#FF6200] hover:bg-[#FF6200] hover:text-black py-5 rounded-3xl font-semibold text-lg transition-all"
+          >
+            <Calendar className="w-5 h-5" />
+            Book Undercoating Appointment
+          </a>
         </form>
       ) : (
         <motion.div
