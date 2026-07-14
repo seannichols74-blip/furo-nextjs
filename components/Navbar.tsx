@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ShieldCheck, MapPin, Phone, Menu, X } from "lucide-react";
+import { ShieldCheck, MapPin, Phone, Menu, X, Calendar } from "lucide-react";
 
 const links: { href: string; label: string; highlight?: boolean }[] = [
   { href: "#services", label: "Services" },
@@ -11,7 +11,6 @@ const links: { href: string; label: string; highlight?: boolean }[] = [
   { href: "#undercoating", label: "Undercoating", highlight: true },
   { href: "#gallery", label: "Projects" },
   { href: "#testimonials", label: "Reviews" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -64,7 +63,7 @@ export default function Navbar() {
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-200">
+          <div className="hidden md:flex flex-1 items-center justify-center gap-7 text-sm font-medium text-neutral-200">
             {links.map((link) =>
               link.highlight ? (
                 <a
@@ -84,6 +83,15 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
+            <a
+              href="https://cal.com/furoenterprises"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-shine hidden sm:inline-flex items-center gap-2 btn-orange px-6 py-3.5 rounded-xl font-bold text-sm tracking-wide shadow-[0_0_22px_-4px_#FF6200] ring-2 ring-[#FF6200]/60 transition-all hover:shadow-[0_0_26px_-2px_#FF6200]"
+            >
+              <Calendar className="w-4 h-4" />
+              Book Undercoating Now
+            </a>
             <a
               href="#contact"
               className="btn-shine hidden sm:inline-flex items-center gap-2 btn-orange px-6 py-3 rounded-xl font-semibold text-sm tracking-wide"
@@ -146,6 +154,16 @@ export default function Navbar() {
                   className="btn-shine btn-orange text-white text-center rounded-xl mt-3 py-3 font-semibold"
                 >
                   Get a Free Quote
+                </a>
+                <a
+                  href="https://cal.com/furoenterprises"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="btn-shine btn-orange text-white flex items-center justify-center gap-2 rounded-xl mt-2 py-3 font-bold ring-2 ring-[#FF6200]/60"
+                >
+                  <Calendar className="w-4 h-4" />
+                  Book Undercoating Now
                 </a>
               </div>
             </motion.div>
